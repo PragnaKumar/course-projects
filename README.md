@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Course Projects
 ### Overiew
 Hi! I'm Pragna Ravi Kumar, A Master's student at Wayne State University. This repo contains certain personal projects, course projects in collaboration with my friends/teammates. 
