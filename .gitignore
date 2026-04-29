@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.py[cod]
+*.db
+logs/
+.DS_Store
+.vscode/
+memory/*.db
