@@ -11,7 +11,7 @@ Moodreads is an agent-based reading recommendation system built with LangGraph, 
 
 - 🎭 **Mood inference** — describe how you feel in plain English, the system figures out the rest
 - 📖 **Fiction & Leisure** — mood-mapped book recommendations via Google Books
-- 📄 **Research Papers** — searches 6 sources simultaneously (ArXiv, Semantic Scholar, PubMed, bioRxiv, medRxiv, IEEE Xplore)
+- 📄 **Research Papers** — searches 6 sources simultaneously (ArXiv, PubMed, bioRxiv, medRxiv, IEEE Xplore)
 - 📘 **Textbooks** — level-aware academic textbook recommendations
 - 🔗 **Always includes links** — every recommendation has a direct URL
 - 💾 **Persistent memory** — conversation history and mood preferences saved across sessions
@@ -140,7 +140,6 @@ moodreads/
 │   ├── google_books.py        # MCP client + direct fallback
 │   ├── ieee.py                # MCP client + direct fallback
 │   ├── pubmed.py              # PubMed direct client
-│   ├── semantic_scholar.py    # Semantic Scholar direct client
 │   └── biorxiv.py             # bioRxiv + medRxiv client
 ├── ui/
 │   ├── styles.py              # CSS + shared helpers
