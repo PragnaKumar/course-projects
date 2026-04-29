@@ -24,8 +24,7 @@ Moodreads is an agent-based reading recommendation system built with LangGraph, 
 | Layer | Technology |
 |---|---|
 | Agent Framework | LangGraph |
-| LLM (local) | Ollama + qwen2.5:7b |
-| LLM (cloud) | OpenRouter + qwen/qwen-2.5-7b-instruct |
+| LLM | Ollama + qwen2.5:7b |
 | MCP Servers | FastMCP + uvicorn |
 | UI | Streamlit |
 | Memory | SqliteSaver + SQLite |
@@ -100,23 +99,6 @@ App will be available at **http://localhost:8501**
 
 ---
 
-## ☁️ Cloud Deployment (HuggingFace Spaces)
-
-The app supports OpenRouter as a drop-in replacement for Ollama, using the same `qwen/qwen-2.5-7b-instruct` model.
-
-1. Get a free API key at [openrouter.ai](https://openrouter.ai)
-2. Add secrets to your HuggingFace Space settings:
-
-```
-OPENROUTER_API_KEY = your_key_here
-GOOGLE_BOOKS_API_KEY = your_key_here
-IEEE_API_KEY = your_key_here
-```
-
-The app automatically detects `OPENROUTER_API_KEY` and switches to cloud mode — no code changes needed.
-
----
-
 ## 🔑 Environment Variables
 
 Copy `.env.example` to `.env` and fill in your keys:
@@ -129,7 +111,6 @@ cp .env.example .env
 |---|---|---|
 | `GOOGLE_BOOKS_API_KEY` | Yes | [Google Cloud Console](https://console.cloud.google.com) |
 | `IEEE_API_KEY` | Yes | [developer.ieee.org](https://developer.ieee.org) |
-| `OPENROUTER_API_KEY` | Cloud only | [openrouter.ai](https://openrouter.ai) |
 | `OLLAMA_BASE_URL` | No | Default: `http://localhost:11434` |
 | `OLLAMA_MODEL` | No | Default: `qwen2.5:7b` |
 
@@ -155,7 +136,7 @@ moodreads/
 │   ├── conversation.py        # SqliteSaver checkpointer
 │   └── preferences.py         # User preference store
 ├── models/
-│   └── llm.py                 # Ollama / OpenRouter factory
+│   └── llm.py                 # Ollama LLM factory
 ├── tools/
 │   ├── arxiv.py               # MCP client + direct fallback
 │   ├── google_books.py        # MCP client + direct fallback
@@ -193,12 +174,6 @@ moodreads/
 - *Beginner textbook for linear algebra*
 - *Graduate level deep learning book*
 - *Best book to learn Python from scratch*
-
----
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
