@@ -28,7 +28,7 @@ Moodreads is an agent-based reading recommendation system built with LangGraph, 
 | MCP Servers | FastMCP + uvicorn |
 | UI | Streamlit |
 | Memory | SqliteSaver + SQLite |
-| APIs | Google Books · ArXiv · Semantic Scholar · PubMed · bioRxiv · IEEE Xplore |
+| APIs | Google Books · ArXiv  · PubMed · bioRxiv · IEEE Xplore |
 
 ---
 
