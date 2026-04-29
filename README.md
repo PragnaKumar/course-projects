@@ -95,8 +95,6 @@ python mcp_servers/ieee_server.py &
 streamlit run app.py
 ```
 
-App will be available at **http://localhost:8501**
-
 ---
 
 ## 🔑 Environment Variables
